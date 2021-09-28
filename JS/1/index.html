@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="true" />
+    <title>Анкета</title>
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/slider.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mob-menu-container">
+        <button onclick="openMenu()"></button>
+    </div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a>Личная информация</a></li>
+                <li><a href="#experience">Опыт</a></li>
+                <li><a href="#js">JavaScript</a></li>
+                <li><a href="#about">О себе</a></li>
+                <li><a onclick="runDataWrite()">Заполнинть данные</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Акета</h1>
+
+            <div class="block-info">
+                <img src="assets/images/icons/icon.png">
+                <p class="block-title">Личная информация</p>
+                <form id="questionnaire">
+                    <input type="text" placeholder="ФИО">
+                    <select id="birth_year">
+                        <option hidden style="color: aquamarine;">Год рождения</option>
+                    </select>
+                    <input type="text" placeholder="Место проживания">
+                    <input type="text" placeholder="Skype">
+                    <input type="email" placeholder="E-mail">
+                </form>
+            </div>
+            <div class="block-info" id="experience">
+                <img src="assets/images/icons/Shape 7.png">
+                <p class="block-title">Расскажите о своем опыте</p>
+                <div class="block-checkbox">
+                    <label><input type="checkbox">БЭМ/OOCSS</label>
+                    <label><input type="checkbox">Stylus/LESS/SASS</label>
+                    <label><input type="checkbox">Работаю с SVG</label>
+                    <label><input type="checkbox">Верстаю семантично</label>
+                    <label><input type="checkbox">ES2015/ES2016</label>
+                    <label><input type="checkbox">Gulp/GRUNT</label>
+                    <label><input type="checkbox">Webpack</label>
+                    <label><input type="checkbox">jQuery</label>
+                    <label><input type="checkbox">Использую Git</label>
+                </div>
+            </div>
+            <div class="block-info" id="js">
+                <img src="assets/images/icons/icon-js.png">
+                <p class="block-title">Уровень владения JavaScript</p>
+                <div id="range">
+                    <div id="range_polygon"></div>
+                </div>
+            </div>
+            <div class="block-info" id="about">
+                <img src="assets/images/icons/icon-about.png">
+                <p class="block-title">Расскажите о себе</p>
+                <p class="block-description">Напишите несколько предложений, чем привлекла наша вакансия <br>и что
+                    вы
+                    ожидаете от работы у нас.
+                </p>
+                <textarea rows="10" name="text" placeholder="Понравилась тем, что..."></textarea>
+                <div><button>Готово</button></div>
+            </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/slider.js"></script>
+</body>
+
+</html>
